@@ -1,0 +1,25 @@
+% arara: lualatex
+% arara: clean: { extensions: [ aux, idx, ilg, ind, log, out, toc ] }
+\documentclass[11pt, a4paper]{report}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\usepackage{microtype}
+\usepackage[
+    paperheight=210mm,
+    paperwidth=110mm,
+    portrait,
+    margin=0.5cm,
+    layoutwidth=11cm,
+    layoutheight=20cm,
+    showframe
+]{geometry}
+\usepackage{blindtext}
+
+\usepackage{pgfpages}
+    \pgfpagesuselayout{2 on 1}[a4paper, landscape, border shrink=5mm]
+
+\begin{document}
+
+\Blinddocument
+
+\end{document}
