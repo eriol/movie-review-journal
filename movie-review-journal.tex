@@ -8,15 +8,35 @@
     paperheight=210mm,
     paperwidth=110mm,
     portrait,
-    margin=0.5cm,
-    layoutwidth=11cm,
-    layoutheight=20cm,
-    showframe
+    % margin=1cm,
+    % showframe
 ]{geometry}
+
 \usepackage{blindtext}
 
 \usepackage{pgfpages}
-    \pgfpagesuselayout{2 on 1}[a4paper, landscape, border shrink=5mm]
+    \pgfpagesdeclarelayout{two pages side by side}
+    {
+      \def\pgfpageoptionfirstshipout{1}
+    }
+    {
+      \pgfpagesphysicalpageoptions
+      {%
+        logical pages=2,%
+        physical height=\pgfpageoptiontwoheight,%
+        physical width=\pgfpageoptiontwowidth,%
+        current logical shipout=\pgfpageoptionfirstshipout%
+      }
+      \pgfpageslogicalpageoptions{1}
+      {%
+        center=\pgfpageoptionfirstcenter,%
+      }%
+      \pgfpageslogicalpageoptions{2}
+      {%
+        center=\pgfpageoptionsecondcenter,%
+      }%
+    }
+    \pgfpagesuselayout{two pages side by side}[second right]
 
 \begin{document}
 
