@@ -55,13 +55,11 @@
     \pagebreak
 
     \pagenumbering{arabic}
-    \input{review}
 
-    \pagebreak
+    \directlua{\detokenize{
+    for i=1,10,1 do
+        tex.sprint("\\input{review}\\pagebreak")
+    end
+    }}
 
-    \input{review}
-
-    \pagebreak
-
-    \input{review}
 \end{document}
