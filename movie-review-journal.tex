@@ -1,6 +1,7 @@
 % arara: lualatex
 % arara: clean: { extensions: [ aux, idx, ilg, ind, log, out, toc ] }
 \documentclass[11pt, a4paper]{report}
+\usepackage{nopageno}
 \usepackage{fontspec}
 \usepackage{polyglossia}
 \usepackage{microtype}
@@ -48,16 +49,13 @@
     made by Daniele Tricoli.}
 
     \emph{Source at https://noa.mornie.org/eriol/movie-review-journal}
-    \thispagestyle{empty}
     \pagebreak
 
     \maketitle
     \pagebreak
 
-    \pagenumbering{arabic}
-
     \directlua{\detokenize{
-    for i=1,10,1 do
+    for i=1,4,1 do
         tex.sprint("\\input{review}\\pagebreak")
     end
     }}
