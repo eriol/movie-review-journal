@@ -12,8 +12,6 @@
     % showframe
 ]{geometry}
 
-\usepackage{blindtext}
-
 \usepackage{pgfpages}
     \pgfpagesdeclarelayout{two pages side by side}
     {
@@ -38,8 +36,23 @@
     }
     \pgfpagesuselayout{two pages side by side}[second right]
 
+\title{Movie review journal}
+\date{}
+
+
 \begin{document}
 
-\Blinddocument
+    \vspace*{\fill}
+    \emph{A DIY insert for Traveler's Notebook (regular size) to track movies
+    made by Daniele Tricoli.}
+
+    \emph{Source at https://noa.mornie.org/eriol/movie-review-journal}
+    \thispagestyle{empty}
+    \pagebreak
+
+    \maketitle
+    \thispagestyle{empty}
+    \pagebreak
+
 
 \end{document}
