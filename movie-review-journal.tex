@@ -11,7 +11,6 @@
     margin=15mm
     % showframe
 ]{geometry}
-
 \usepackage{pgfpages}
     \pgfpagesdeclarelayout{two pages side by side}
     {
@@ -35,6 +34,8 @@
       }%
     }
     \pgfpagesuselayout{two pages side by side}[second right]
+\usepackage{fontawesome}
+
 
 \title{Movie review journal}
 \date{}
@@ -51,8 +52,16 @@
     \pagebreak
 
     \maketitle
-    \thispagestyle{empty}
     \pagebreak
 
+    \pagenumbering{arabic}
+    \input{review}
 
+    \pagebreak
+
+    \input{review}
+
+    \pagebreak
+
+    \input{review}
 \end{document}

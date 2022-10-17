@@ -1,0 +1,37 @@
+\begin{center}
+    {\large \textbf{Movie review}}
+\end{center}
+
+\noindent {\large Title}: \hrulefill
+
+\noindent {\large Director}: \hrulefill
+
+\noindent {\large Year}: \hrulefill\ {\large Length}: \hrulefill
+
+\noindent {\large Genre}: \hrulefill\ {\large Music by}: \hrulefill
+
+\noindent {\large Date watched}: \hrulefill\ {\large Rating}: \faStarO\faStarO\faStarO\faStarO\faStarO
+
+
+\noindent {\large Cast}: \hrulefill
+\directlua{\detokenize{
+for i=0,3,1 do
+    tex.sprint("\\null\\hrulefill{} \\\\")
+end
+}}
+\null\hrulefill{}
+
+\noindent {\large Review}: \hrulefill
+\directlua{\detokenize{
+for i=0,19,1 do
+    tex.sprint("\\null\\hrulefill{} \\\\")
+end
+}}
+\null\hrulefill{}
+
+\noindent {\large Notes}: \hrulefill
+\directlua{\detokenize{
+for i=0,3,1 do
+    tex.sprint("\\null\\hrulefill{} \\\\")
+end
+}}
