@@ -1,10 +1,21 @@
-TEX_FILE := movie-review-journal.tex
+DOCUMENT_NAME := movie-review-journal
+TEX_FILE := ${DOCUMENT_NAME}.tex
+PDF_FILE := ${DOCUMENT_NAME}.pdf
+ROTATED_PAGE := 180-rotated-review-page.pdf
 
-.PHONY: build
+.PHONY: all build print clean
+
+all: build print clean
 
 build:
 	arara $(TEX_FILE)
 
-# Needed to print front and back.
-print-rotated:
-	pdftk movie-review-journal.pdf cat 3south output output.pdf
+# Ready to print front and back.
+print:
+	pdftk ${PDF_FILE} cat 2south output ${ROTATED_PAGE}
+	mv ${PDF_FILE} ${PDF_FILE}~
+	pdftk ${PDF_FILE}~ ${ROTATED_PAGE} cat output ${PDF_FILE}
+
+clean:
+	rm -f ${PDF_FILE}~ ${ROTATED_PAGE}
+	rm -rf svg-inkscape
