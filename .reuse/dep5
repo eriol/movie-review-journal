@@ -1,0 +1,25 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: movie-review-journal
+Upstream-Contact: Daniele Tricoli <eriol@mornie.org>
+Source: https://noa.mornie.org/eriol/movie-review-journal
+
+Files: *.tex
+Copyright: 2022 Daniele Tricoli <eriol@mornie.org>
+License: LPPL-1.3c
+
+Files: Makefile
+Copyright: 2022 Daniele Tricoli <eriol@mornie.org>
+License: GPL-3.0-or-later
+
+Files: README.md
+Copyright: 2022 Daniele Tricoli <eriol@mornie.org>
+License: CC-BY-SA-4.0
+
+Files: .gitignore
+Copyright: 2022 Daniele Tricoli <eriol@mornie.org>
+License: CC0-1.0
+
+Files: movie-icon.svg
+Copyright: gsagri04
+License: CC0-1.0
+Comment: Downloaded from https://openclipart.org/detail/145165/movie-tape-icon

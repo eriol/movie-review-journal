@@ -1,3 +1,7 @@
+# SPDX-FileCopyrightText: 2022 Daniele Tricoli <eriol@mornie.org>
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
 DOCUMENT_NAME := movie-review-journal
 TEX_FILE := ${DOCUMENT_NAME}.tex
 PDF_FILE := ${DOCUMENT_NAME}.pdf
