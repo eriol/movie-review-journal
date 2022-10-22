@@ -15,7 +15,7 @@ build:
 	arara $(TEX_FILE)
 
 # Ready to print front and back.
-print:
+print: build
 	pdftk ${PDF_FILE} cat 2south output ${ROTATED_PAGE}
 	mv ${PDF_FILE} ${PDF_FILE}~
 	pdftk ${PDF_FILE}~ ${ROTATED_PAGE} cat output ${PDF_FILE}
